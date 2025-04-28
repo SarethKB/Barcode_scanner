@@ -3,7 +3,7 @@ function onScanSuccess(decodedText) {
   console.log(`Scanned code: ${decodedText}`);
 
   // Load the CSV from OneDrive using the direct link
-  Papa.parse("https://1drv.ms/x/c/686081eed087a18e/EVzYKH-z3zRJr4Uu-AN6yXwBKtYiPnAveDdBGYcmhcq_AQ", {
+  Papa.parse("https://docs.google.com/file/d/1TDlnxlqHmAjGjG4KnpCCAayNs9nFEpGU/edit?usp=docslist_api&filetype=msexcel", {
     download: true,
     header: true,
     complete: function(results) {
