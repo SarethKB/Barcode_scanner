@@ -3,19 +3,18 @@ function onScanSuccess(decodedText) {
   console.log(`Scanned code: ${decodedText}`);
 
   // Load the CSV file
-  Papa.parse("sample.csv", {
+  Papa.parse("stackker_marketing_logistics_stock_summary.csv", {
     download: true,
     header: true,
     complete: function(results) {
       const data = results.data;
 
       // Search for the scanned barcode
-      const match = data.find(row => row['barcode'] === decodedText);
+      const match = data.find(row => row['Barcode'] === decodedText);
 
       if (match) {
         document.getElementById('result').innerHTML = `
-          <strong>Item:</strong> ${match.name}<br>
-          <strong>Price:</strong> ${match.price}
+          <strong>Item:</strong> ${match.Stock Value}
         `;
       } else {
         document.getElementById('result').textContent = "No match found.";
