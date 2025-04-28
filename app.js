@@ -14,7 +14,7 @@ function onScanSuccess(decodedText) {
 
       if (match) {
         document.getElementById('result').innerHTML = `
-          <strong>Item:</strong> ${match.Stock Value}
+          <strong>Item:</strong> ${match.StockValue}
         `;
       } else {
         document.getElementById('result').textContent = "No match found.";
